@@ -3,14 +3,14 @@ A project creating a small business network
 
 - A SMB (small/medium business) network, with a LAN, DMZ, and Guest network.
 
-*A Windows domain environment.
+- A Windows domain environment.
 
-*A IIS webserver.
+  - A IIS webserver.
 
-*A Windows FTP server.
+  - A Windows FTP server.
 
-*A Win10 workstation.
+  - A Win10 workstation.
 
-*A LAMP webserver running on Ubuntu, hosting a wiki.
+- A LAMP webserver running on Ubuntu, hosting a wiki.
 
-*A FortiGate firewall, with a VIP for a DMZ webserver.
+- A FortiGate firewall, with a VIP for a DMZ webserver.
