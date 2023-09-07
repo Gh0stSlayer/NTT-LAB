@@ -19,37 +19,46 @@ The first time you start the firewall it will take a minute or two to setup.
 Once setup is complete, you will see the login screen.
 Note: You may have to tap enter to get the console screen to refresh.
 
-![alt text](
+![alt text](https://github.com/Gh0stSlayer/NTT-LAB/blob/main/Stage1.drawio.png?raw=true)
 
-Login to the console:
+## Login to the console:
+```
   username = admin
   password = none, just hit enter
-Create a new password:
+```
+## Create a new password:
+```
   Passw0rd!
-Configure the LAN interface:
-Refer to FortiNet Cookbook: Configure an interface in the CLI.
+```
+## Configure the LAN interface:
+Refer to FortiNet Cookbook: [Configure an interface in the CLI](https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/574723/interface-settings).
+
 On a physical firewall the LAN interface is usually preconfigured. On a virtualized firewall you usually have to manually configure it. Once the LAN interface has been configured you will be able to access the firewall GUI from a device on the LAN.
 
 Per the clients request you will configure 10.128.0.0/24 as the LAN network.
 The LAN gateway will be 10.128.0.1/24.
 The LAN interface is named port2 on the FortiGate firewall.
+ ```
   conf sys int
       edit port2
           set allowaccess ping http https ssh
           set ip 10.128.0.1/24
       end
-
+```
 
 Verify the configuration is correct:
-
+```
   show sys int port2
+```
 
+###Configure the DHCP server for the LAN interface:
 
-Configure the DHCP server for the LAN interface:
 Enable the DHCP sever on the LAN interface.
 The firewall will perform DHCP services for devices on the LAN network.
 Set the DHCP pool scope to 10.128.0.[100-199].
+
 Note: There is no particular reason for the [100-199] range, it just sets boundaries to work within. In a production environment it is much easier to expand a DHCP range that in is to contract.
+```
   conf sys dhcp server
       edit 1
           set default-gateway 10.128.0.1
@@ -63,8 +72,9 @@ Note: There is no particular reason for the [100-199] range, it just sets bounda
           end
       next
   end
-
+```
 
 Verify the configuration is correct:
-
+```
   show sys dhcp server 1
+```
