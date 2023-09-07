@@ -1,7 +1,7 @@
 # NTT-LAB
 A project creating a small business network
 
-..*A SMB (small/medium business) network, with a LAN, DMZ, and Guest network.
+..* A SMB (small/medium business) network, with a LAN, DMZ, and Guest network.
 
 *A Windows domain environment.
 
