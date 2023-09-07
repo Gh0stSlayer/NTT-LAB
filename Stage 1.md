@@ -11,9 +11,10 @@ Complete the network setup through the firewall GUI.
 ## Lab workspace:
 During this stage you will add a FortiNet firewall, two Ethernet switches, and a Win10 workstation to the lab workspace.
 
-# Stage1 : Network Setup : Configure the LAN network
+# Step 1 : Network Setup
+### Configure the LAN network
 
-## Instructions:
+### Instructions:
 Start the firewall in GNS3, and then double click it to connect through the console interface.
 The first time you start the firewall it will take a minute or two to setup.
 Once setup is complete, you will see the login screen.
@@ -51,7 +52,7 @@ Verify the configuration is correct:
   show sys int port2
 ```
 
-###Configure the DHCP server for the LAN interface:
+## Configure the DHCP server for the LAN interface:
 
 Enable the DHCP sever on the LAN interface.
 The firewall will perform DHCP services for devices on the LAN network.
