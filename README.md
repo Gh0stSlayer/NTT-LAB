@@ -1,3 +1,4 @@
+WIP Documentation Incomplete
 # NTT-LAB
 A project creating a small business network
 
