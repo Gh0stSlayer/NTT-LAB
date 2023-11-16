@@ -1,6 +1,6 @@
 WIP Documentation Incomplete
 # NTT-LAB
-A project creating a small business network
+A project creating a small office/ home office (SOHO) network
 
 - A SMB (small/medium business) network, with a LAN, DMZ, and Guest network.
 
